@@ -1,1 +1,6 @@
-<p>meal-detail works!</p>
+<div *ngIf="meal">
+    <h2>{{meal.name | uppercase}}</h2>
+    <div><span>Repas : </span>{{meal.cat}}</div>
+
+    <app-ingredient-details [ingredientsList]="meal.ingredients"></app-ingredient-details>
+</div>

@@ -4,18 +4,10 @@
 
 <ul class="meals">
     <li *ngFor="let meal of meals"
-        [class.selected]="meal ===selectedMeal"
+        [class.selected]="meal === selectedMeal"
         (click)="onSelect(meal)">
         <span class="badge">{{meal.name}}</span>
     </li>
 </ul>
 
-<div *ngIf="selectedMeal">
-    <h2>{{selectedMeal.name | uppercase}}</h2>
-    <div><span>Repas : </span>{{selectedMeal.cat}}</div>
-
-    <span>Ingredients:</span>
-    <li *ngFor="let ing of selectedMeal.ingredients">
-        <span class="badge">{{ing}}</span>
-    </li>
-</div>
+<app-meal-detail [meal]="selectedMeal"></app-meal-detail>
