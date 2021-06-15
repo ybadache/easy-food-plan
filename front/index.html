@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+    <head>
+        <title>Planificateur de menus</title>
+
+        <meta charset="utf-8">
+        <meta name="author" content="Yassine Badache">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="Un petit planificateur de menus que j'essaie de faire">
+
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+        <link rel="stylesheet" href="styles/main.css?v=1.0">
+    </head>
+
+    <body>
+        <div class="container" id="app">
+            <h2>{{ title }}</h2>
+            <div class="row">
+                <div class="col">
+                    {{ description }}
+                </div>
+                <div class="col">
+                    <ol>
+                        <li v-for="ingredient in ingredients">
+                            {{ ingredient.text }}
+                        </li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </body>
+    
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+    <script src="scripts/index.js"></script>
+</html>
